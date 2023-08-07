@@ -1,7 +1,12 @@
+"""
+Run this script only to get all misisons on FLEET server or specifc robot.
+
+"""
+
 import requests
 import json
 
-ip = <IP Address of FLEET Server>
+ip = <Device IP Adress>
 host = 'http://' + ip + '/api/v2.0.0/'
 
 headers = {'Content-Type': 'application/json',
