@@ -1,5 +1,6 @@
 """
-Main program that reads a PLC tag and schedules a specified mission on the MiR FLEET.
+Main program that reads a PLC tag and schedules a specific mission on the MiR FLEET. 
+We are using (2) PLC tags to call initialize and acknowledge the request.
 
 """
 
