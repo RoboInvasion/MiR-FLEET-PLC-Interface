@@ -15,7 +15,7 @@ with PLC() as comm:
             comm.Write("Hmi.Req[1]", 1)
             continue
 
-print("Hello")
+
 
 
         
