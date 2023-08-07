@@ -1,7 +1,7 @@
 import requests
 import json
 
-ip = '172.16.1.142'
+ip = <IP Address of FLEET Server>
 host = 'http://' + ip + '/api/v2.0.0/'
 
 headers = {'Content-Type': 'application/json',
@@ -14,7 +14,7 @@ def get_missions():
 
 
 def pick_mission():
-    payload = {"mission_id": "64b7faba-263e-11ee-a80f-000129ad3d43", "robot_id": 0,
+    payload = {"mission_id": <guid>, "robot_id": 0,
                "priority": 0,
                "high_priority": True}
 
@@ -23,10 +23,8 @@ def pick_mission():
     print(post_mission.status_code)
 
 
-# "earliest_start_time": "2023-07-31T16:06:00.175Z",
-
 def place_mission():
-    payload = {"mission_id": "f052f827-b868-11ed-b178-000129ad3d43", "robot_id": 0,
+    payload = {"mission_id": <guid>, "robot_id": 0,
                "priority": 0,
                "high_priority": True}
 
