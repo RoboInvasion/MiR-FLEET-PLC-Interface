@@ -12,7 +12,7 @@ print("Establishing connection with PLC....")
 
 with PLC() as comm:
     while True:
-        comm.IPAddress = '172.16.10.101'
+        comm.IPAddress = '<PLC IP Adress>'
         pallet_ready = comm.Read("Hmi.Req[0]")
         robot_accept = comm.Read("Hmi.Req[1]")
 
