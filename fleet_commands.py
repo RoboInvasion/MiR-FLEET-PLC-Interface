@@ -1,7 +1,7 @@
 import requests
 import json
 
-ip = '172.16.1.142'
+ip = '172.16.1.152'
 host = 'http://' + ip + '/api/v2.0.0/'
 
 headers = {'Content-Type': 'application/json',
