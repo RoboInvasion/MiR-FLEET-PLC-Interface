@@ -8,14 +8,18 @@ with PLC() as comm:
         comm.IPAddress = '172.16.10.101'
         pallet_ready = comm.Read("Hmi.Req[0]")
         robot_accept = comm.Read("Hmi.Req[1]")
+        place_empty = comm.read("Hmi.Req[2]")
 
         if pallet_ready.Value == 1 and robot_accept.Value == 0:
             fleet_commands.pick_mission()
-            print("Mission Scheduled")
+            print("Pick Mission Scheduled")
             comm.Write("Hmi.Req[1]", 1)
             continue
 
-
+        elif place_empty.Value == 1:
+            fleet_commands.place_mission()
+            print("Place Mission Scheduled")
+            continue
 
 
         
